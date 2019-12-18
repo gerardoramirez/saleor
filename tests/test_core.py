@@ -91,7 +91,7 @@ def test_get_currency_for_country(country, expected_currency, monkeypatch):
 def test_create_superuser(db, client, media_root):
     credentials = {"email": "admin@example.com", "password": "admin"}
     # Test admin creation
-    assert User.objects.all().count() == 1
+    assert User.objects.all().count() == 0
     create_superuser(credentials)
     assert User.objects.all().count() == 1
     admin = User.objects.all().first()

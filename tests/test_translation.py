@@ -136,4 +136,4 @@ def shipping_method_translation(
 ):
     assert not shipping_method.translated.name == "French name"
     settings.LANGUAGE_CODE = "fr"
-    assert shipping_method.translated.name == "Spanish name"
+    assert shipping_method.translated.name == "French name"
